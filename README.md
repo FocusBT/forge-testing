@@ -9,3 +9,5 @@ to deploy: forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.
 to make it more flexible just make a .env file and add PRIVATE_KEY and deploy it like
 
 to deploy: forge script script/DeploySimpleStorage.s.sol --rpc-url $URL --broadcast --private-key $PRIVATE_KEY
+
+just like we are using local URL to deploy our smart contract you can use different networks(sepholia, eth, polygon) URL to deploy smart contract.
