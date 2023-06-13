@@ -18,7 +18,20 @@ ONCE YOUR CODE IS DEPLOYED THERE ARE 2 WAYS TO INTRECT WITH IT EITHER YOU CAN DO
 
 1. Using Terminal
 
+-> To send a write transaction
+
 `cast send <smart contract address> "store(uint256)" <input here> --rpc-url <rpc url here> --private-key <private key here> `
 
 something like this
-`cast send 0xe7f1725e7734ce288f8367e1bb143e90bb3f0512 "store(uint256)" 786 --rpc-url http://127.0.0.1:8545 --broadcast --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`
+`cast send 0xe7f1725e7734ce288f8367e1bb143e90bb3f0512 "store(uint256)" 786 --rpc-url http://127.0.0.1:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`
+
+-> To send a read transactiom
+
+`cast call <smart contract address> "retrieve()"`
+
+something like this
+`cast call 0xe7f1725e7734ce288f8367e1bb143e90bb3f0512 "retrieve()"`
+
+once you do that you will find value in hex so
+`cast --to-base 0x0000000000000000000000000000000000000000000000000000000000000312 dec`
+it will convert the value into decimal
