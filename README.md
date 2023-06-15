@@ -42,3 +42,5 @@ it will be saved in lib
 
 check foundry.toml: I added this `remappings = ["@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/"]` it means whenever in smart contract whenever you will import `@chainlink/contracts/anyFile` it will be fetched from `chainlink-brownie-contracts/contracts/`..
 
+once you add console.log you should run tests like this
+`forge test -v`
