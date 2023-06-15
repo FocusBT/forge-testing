@@ -35,3 +35,10 @@ something like this
 once you do that you will find value in hex so
 `cast --to-base 0x0000000000000000000000000000000000000000000000000000000000000312 dec`
 it will convert the value into decimal
+
+to install any external library
+`forge install smartcontractkit/chainlink-brownie-contracts@versionOfRepo --no-commit`
+it will be saved in lib
+
+
+
