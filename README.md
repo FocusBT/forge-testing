@@ -14,6 +14,9 @@
   - [Install External Libraries](#install-external-libraries)
   - [Tests Commands](#tests-commands)
     - [Understanding the traces](#understanding-the-traces)
+    - [Gas Reporter and Snapshots](#gas-reporter-and-snapshots)
+    - [Debugger](#debugger)
+    - [Cast](#cast)
 
 
 ## Installation
@@ -95,3 +98,23 @@ it will be saved in lib
   - Blue: For calls to cheat codes
   - Cyan: For emitted logs
   - Yellow: For contract deployments
+
+### Gas Reporter and Snapshots
+- #### Gas Reporter
+  - `forge test -vvv --gas-reporter`
+  - it will give you the gas usage of each function
+  - ![result](image.png)
+- #### Gas Snapshot
+  - `forge test -vvv --gas-snapshot`
+  - it will give you the gas usage of each function and also the gas usage of the whole test file
+
+### Debugger
+- #### Debugger
+  - `forge debug <test file path>`
+  - it will open a website and you can debug your smart contract
+  - check website for more [website documentation](https://book.getfoundry.sh/forge/debugger)
+
+### Cast
+- Cast is a command line tool that allows you to interact with your smart contracts from the command line, and it allows you to send transactions and call functions on your smart contracts.
+- e.g: `cast call 0x6b175474e89094c44da98b954eedeac495271d0f "totalSupply()(uint256)" --rpc-url https://eth-mainnet.alchemyapi.io/v2/Lc7oIGYeL_QvInzI0Wiu_pOZZDEKBrdf
+8603853182003814300330472690`
