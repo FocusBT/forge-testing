@@ -1,3 +1,7 @@
+
+# Foundry
+
+
 to set forge: open bash and type: source /c/Users/LENOVO/.bashrc
 
 
@@ -51,3 +55,7 @@ check foundry.toml: I added this `remappings = ["@chainlink/contracts/=lib/chain
 
 once you add console.log you should run tests like this
 `forge test -v`
+
+
+you can also run tests on test networks just type
+`forge test --fork-url $SEPHOLIA_RPC_URL`

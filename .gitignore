@@ -9,10 +9,10 @@ out/
 
 # Docs
 docs/
-node_modules
-lib
-cache
-broadcast
+/node_modules
+/lib
+/cache
+/broadcast
 
 # Dotenv file
 .env
