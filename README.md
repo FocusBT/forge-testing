@@ -68,3 +68,6 @@ it will be saved in lib
     - `forge test -v`
 - you can also run tests on test networks just type
     - `forge test --fork-url $SEPHOLIA_RPC_URL`
+- There are 2 methods of creating a intance of a contract
+  - 1) In [SimpleStorage.t.sol](test/SimpleStorage.t.sol), you can see we have created a separate deploy [script](src/SimpleStorage.sol) for deploying the contract and it is returning the object of the contract so we can use it in our tests. 
+  - 2) You can create tests inside the test file, just like [TestingDocumenation.t.sol](test/TestingDocumenation.t.sol) and create a instance of the contract inside the test file. it just used the keyword `new` to create a instance of the contract.
