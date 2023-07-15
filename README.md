@@ -13,6 +13,7 @@
       - [Once you do that you will find value in hex so](#once-you-do-that-you-will-find-value-in-hex-so)
   - [Install External Libraries](#install-external-libraries)
   - [Tests Commands](#tests-commands)
+    - [Understanding the traces](#understanding-the-traces)
 
 
 ## Installation
@@ -71,3 +72,16 @@ it will be saved in lib
 - There are 2 methods of creating a intance of a contract
   - 1) In [SimpleStorage.t.sol](test/SimpleStorage.t.sol), you can see we have created a separate deploy [script](src/SimpleStorage.sol) for deploying the contract and it is returning the object of the contract so we can use it in our tests. 
   - 2) You can create tests inside the test file, just like [TestingDocumenation.t.sol](test/TestingDocumenation.t.sol) and create a instance of the contract inside the test file. it just used the keyword `new` to create a instance of the contract.
+
+### Understanding the traces
+- `forge test -vvv` or `forge test -vvvv` will give you the traces of the transaction
+  -  [<Gas Usage>] <Contract>::<Function>(<Parameters>)
+    ├─ [<Gas Usage>] <Contract>::<Function>(<Parameters>)
+    │   └─ ← <Return Value>
+    └─ ← <Return Value>
+- Traces will come with different colors
+  - Green: For calls that do not revert
+  - Red: For reverting calls
+  - Blue: For calls to cheat codes
+  - Cyan: For emitted logs
+  - Yellow: For contract deployments
