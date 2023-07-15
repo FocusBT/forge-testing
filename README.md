@@ -23,15 +23,25 @@
 
 
 ## Deploy
-- `forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8545 --broadcast --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`
-- to make it more flexible just make a .env file and add PRIVATE_KEY and deploy it like
--  -> once you create .env file you need to follow these steps first
--     -> open terminal type following commands
-            `chmod +x load_env.sh`
-            `source load_env.sh`
-- `forge script script/DeploySimpleStorage.s.sol --rpc-url $URL --broadcast --private-key $PRIVATE_KEY`
-- just like we are using local URL to deploy our smart contract you can use different networks(sepholia, eth, polygon) URL to deploy smart contract.
-- Another way to deploy smart contract is thirdweb: `npx thirdweb deploy`: it will automatically open a website and you can deploy your smart contract on any network you want
+- There are 2 ways to deploy smart contract
+  - 1) Using `create`
+    - `forge create --rpc-url <your_rpc_url> --private-key <your_private_key> src/MyContract.sol:MyContract`
+    - verify and deploy: `forge create --rpc-url <your_rpc_url> \
+    --constructor-args "ForgeUSD" "FUSD" 18 1000000000000000000000 \
+    --private-key <your_private_key> \
+    --etherscan-api-key <your_etherscan_api_key> \
+    --verify \
+    src/MyToken.sol:MyToken`
+  - 2) Using `script`
+    - `forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8545 --broadcast --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`
+    - to make it more flexible just make a .env file and add PRIVATE_KEY and deploy it like
+    -  -> once you create .env file you need to follow these steps first
+    -     -> open terminal type following commands
+                `chmod +x load_env.sh`
+                `source load_env.sh`
+    - `forge script script/DeploySimpleStorage.s.sol --rpc-url $URL --broadcast --private-key $PRIVATE_KEY`
+    - just like we are using local URL to deploy our smart contract you can use different networks(sepholia, eth, polygon) URL to deploy smart contract.
+    - Another way to deploy smart contract is thirdweb: `npx thirdweb deploy`: it will automatically open a website and you can deploy your smart contract on any network you want
 
 ## Intrect with deployed Contract
 
