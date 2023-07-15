@@ -4,11 +4,15 @@
 
 
 ## Table of contents
-- [Installation](#installation)
-- [Deploy](#deploy)
-- [Intrect with deployed Contract](#Intrect-with-deployed-Contract)
-- [Install External Libraries](#Install-External-Libraries)
-- [Test Commonds](#Test-Commonds)
+- [Foundry](#foundry)
+  - [Table of contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Deploy](#deploy)
+  - [Intrect with deployed Contract](#intrect-with-deployed-contract)
+      - [Using Terminal:](#using-terminal)
+      - [Once you do that you will find value in hex so](#once-you-do-that-you-will-find-value-in-hex-so)
+  - [Install External Libraries](#install-external-libraries)
+  - [Tests Commands](#tests-commands)
 
 
 ## Installation
